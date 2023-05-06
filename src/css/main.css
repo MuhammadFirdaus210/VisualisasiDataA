@@ -1,0 +1,32 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+}
+
+.title {
+  text-anchor: middle;
+}
+
+.axis text {
+  font-size: 10px;
+}
+
+.bar {
+  fill: rgb(19,
+    247,
+    2);
+  opacity: 0.4;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  background:#94A3B8;
+}
