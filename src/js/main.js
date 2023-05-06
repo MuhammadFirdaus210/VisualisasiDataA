@@ -15,7 +15,6 @@ d3.csv("/src/data/b_depressed.csv")
           : (s.depressed = $(this).attr("value"));
       });
 
-      console.log(s.depressed + s.sex);
       return s;
     };
 
@@ -30,7 +29,6 @@ d3.csv("/src/data/b_depressed.csv")
     // TO DO di sini: any tranformations of the data
     data.forEach((d) => {
       d.percent = +d.percent;
-      console.log("Test " + d.percent);
     });
 
     // Create a new bar chart instance and pass the filtered data to the bar chart class
@@ -43,5 +41,10 @@ d3.csv("/src/data/b_depressed.csv")
       barchart.data = filterData(data);
       barchart.updateVis();
     });
+
+    // // Create a new pie chart instance and pass the filtered data to the pie chart class
+    // let piechart = new Piechart({ parentElement: "#visPiechart" }, filterData(data));
+    // // Show chart
+    // piechart.updateVis();
   })
   .catch((error) => console.error(error));

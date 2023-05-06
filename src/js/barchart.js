@@ -44,12 +44,12 @@ class Barchart {
     // TO DO di sini: Initialize scales
     vis.xScale = d3.scaleBand().range([0, vis.width]).padding(0.1);
 
-    vis.yScale = d3.scaleLinear().range([vis.height, 0]);
+    vis.yScale = d3.scaleLinear().range([vis.height, 1]);
 
     // Initialize axes
     vis.xAxis = d3.axisBottom(vis.xScale).ticks(6).tickSizeOuter(0);
 
-    vis.yAxis = d3.axisLeft(vis.yScale).tickSizeOuter(0);
+    vis.yAxis = d3.axisLeft(vis.yScale).tickSizeOuter(10);
 
     // Define size of SVG drawing area
     vis.svg = d3
@@ -71,6 +71,8 @@ class Barchart {
     vis.xAxisG = vis.chart
       .append("g")
       .attr("class", "axis x-axis")
+      .style("color", "white")
+      .style("font-size", "14px")
       .attr("transform", `translate(0,${vis.height})`);
 
     // Append and move a title for the x-axis. We don't have to move it to the bototm of the
@@ -79,14 +81,15 @@ class Barchart {
       .append("text")
       .attr("y", 20)
       .attr("x", vis.width / 2)
-      .attr("dy", "5em")
-      .attr("fill", "black")
+      .attr("dy", 10)
+      .attr("fill", "white")
       .attr("class", "axis-label x")
       .style("text-anchor", "middle")
+      .style("font-size", "14px")
       .text("Age");
 
     // Append y-axis group
-    vis.yAxisG = vis.chart.append("g").attr("class", "axis y-axis");
+    vis.yAxisG = vis.chart.append("g").attr("class", "axis y-axis").style("color", "white").style("font-size", "10px");
 
     // Append y-axis title
     vis.yAxisTitle = vis.yAxisG
@@ -95,9 +98,10 @@ class Barchart {
       .attr("y", -vis.config.margin.top + 20) // so you subtract the margin.top to push the label visually to the left
       .attr("x", -vis.height / 2) // and also move it vertically down even though it's the 'x' attribute
       .attr("dy", "1em")
-      .attr("fill", "black")
+      .attr("fill", "white")
       .style("text-anchor", "middle")
-      .text("Total Members");
+      .style("font-size", "14px")
+      .text("Education Level");
   }
 
   /**
@@ -110,7 +114,7 @@ class Barchart {
 
     // TO DO di sini: Specificy x- and y-accessor functions
     vis.xValue = (d) => d.Age;
-    vis.yValue = (d) => d.total_members;
+    vis.yValue = (d) => d.education_level;
 
     // TO DO di sini: Set the scale input domains
     vis.xScale.domain(vis.data.map(vis.xValue));

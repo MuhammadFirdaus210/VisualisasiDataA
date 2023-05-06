@@ -58,8 +58,57 @@
         />Not Depressed
       </label>
     </div>
-
+    
     <div id="vis"></div>
+    
+    <h2>Total Depresi berdasarkan Umur</h2>
+    <div class="btn-group2" data-toggle="buttons">
+      <label class="btn btn-primary">
+        <input
+          value=0
+          class="sex"
+          type="radio"
+          name="options"
+          id="option1"
+          autocomplete="off"
+        />Male
+      </label>
+      <label class="btn btn-primary active2">
+        <input
+          value=1
+          type="radio"
+          class="sex"
+          name="options"
+          id="option2"
+          autocomplete="off"
+          checked
+        />Female
+      </label>
+    </div>
+
+    <div class="btn-group2" data-toggle="buttons">
+      <label class="btn btn-primary">
+        <input
+          value=1
+          type="radio"
+          name="options"
+          id="option1"
+          autocomplete="off"
+        />Depressed
+      </label>
+      <label class="btn btn-primary active2">
+        <input
+          value=0
+          type="radio"
+          name="options"
+          id="option2"
+          autocomplete="off"
+          checked
+        />Not Depressed
+      </label>
+    </div>
+    <div id="vis2"></div>
+
 
     <!-- Libraries -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -74,6 +123,8 @@
     <!-- your script file -->
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <script src="/src/js/barchart.js"></script>
+    <script src="/src/js/Scatterplot.js"></script>
+    <script src="/src/js/FilterScatterplot.js"></script>
     <script src="/src/js/main.js"></script>
   </body>
 </html>
