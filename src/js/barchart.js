@@ -71,7 +71,7 @@ class Barchart {
     vis.xAxisG = vis.chart
       .append("g")
       .attr("class", "axis x-axis")
-      .style("color", "white")
+      .style("color", "black")
       .style("font-size", "14px")
       .attr("transform", `translate(0,${vis.height})`);
 
@@ -82,14 +82,14 @@ class Barchart {
       .attr("y", 20)
       .attr("x", vis.width / 2)
       .attr("dy", 10)
-      .attr("fill", "white")
+      .attr("fill", "black")
       .attr("class", "axis-label x")
       .style("text-anchor", "middle")
       .style("font-size", "14px")
       .text("Age");
 
     // Append y-axis group
-    vis.yAxisG = vis.chart.append("g").attr("class", "axis y-axis").style("color", "white").style("font-size", "10px");
+    vis.yAxisG = vis.chart.append("g").attr("class", "axis y-axis").style("color", "black").style("font-size", "10px");
 
     // Append y-axis title
     vis.yAxisTitle = vis.yAxisG
@@ -98,7 +98,7 @@ class Barchart {
       .attr("y", -vis.config.margin.top + 20) // so you subtract the margin.top to push the label visually to the left
       .attr("x", -vis.height / 2) // and also move it vertically down even though it's the 'x' attribute
       .attr("dy", "1em")
-      .attr("fill", "white")
+      .attr("fill", "black")
       .style("text-anchor", "middle")
       .style("font-size", "14px")
       .text("Education Level");
