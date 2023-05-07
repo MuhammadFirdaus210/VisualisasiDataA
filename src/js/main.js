@@ -42,9 +42,5 @@ d3.csv("/src/data/b_depressed.csv")
       barchart.updateVis();
     });
 
-    // // Create a new pie chart instance and pass the filtered data to the pie chart class
-    // let piechart = new Piechart({ parentElement: "#visPiechart" }, filterData(data));
-    // // Show chart
-    // piechart.updateVis();
   })
   .catch((error) => console.error(error));
