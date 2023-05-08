@@ -75,7 +75,7 @@ class Scatterplot {
             .attr("cy", this.yScale(0))
             .merge(circles)
             .transition() // Add transition
-            .duration(2000) // Set duration of transition to 1 second
+            .duration(1000) // Set duration of transition to 1 second
             .delay((d, i) => i * 10) // Add 10ms delay between each circle
             .attr("cx", (d) => this.xScale(d.Age) + 50)
             .attr("cy", (d) => this.yScale(d.save_asset));
