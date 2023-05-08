@@ -4,202 +4,304 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-    <title>D3 Tutorial 3 Activity 1</title>
+    <title>Projek Visualisasi Data</title>
 
     <!-- Custom files -->
     <link rel="stylesheet" href="/src/css/main.css" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <!-- <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> -->
   </head>
 
-  <body class="container">
+  <body class="main">
     <div id="parallax-world-of-ugg">
-    
       <section>
         <div class="title">
-          <h3>Tugas Visualisasi Data</h3>
+          <h3>Projek Visualisasi Data</h3>
           <h1>DATA DEPRESI</h1>
         </div>
       </section>
-    
+
       <section>
         <div class="parallax-one">
           <h2>BARCHART</h2>
         </div>
       </section>
-    
+
       <section>
         <div class="block">
           <div class="grafikchart">
             <div id="vis"></div>
             <div class="btn-group" data-toggle="buttons">
               <label class="btn btn-primary">
-                <input value=0 class="sex" type="radio" name="options" id="option1" autocomplete="off" />Male
+                <input
+                  value="0"
+                  class="sex"
+                  type="radio"
+                  name="options"
+                  id="option1"
+                  autocomplete="off"
+                />Male
               </label>
               <label class="btn btn-primary active">
-                <input value=1 type="radio" class="sex" name="options" id="option2" autocomplete="off" checked />Female
+                <input
+                  value="1"
+                  type="radio"
+                  class="sex"
+                  name="options"
+                  id="option2"
+                  autocomplete="off"
+                  checked
+                />Female
               </label>
             </div>
-            
+
             <div class="btn-group" data-toggle="buttons">
               <label class="btn btn-primary">
-                <input value=1 type="radio" name="options" id="option1" autocomplete="off" />Depressed
+                <input
+                  value="1"
+                  type="radio"
+                  name="options"
+                  id="option1"
+                  autocomplete="off"
+                />Depressed
               </label>
               <label class="btn btn-primary active">
-                <input value=0 type="radio" name="options" id="option2" autocomplete="off" checked />Not Depressed
+                <input
+                  value="0"
+                  type="radio"
+                  name="options"
+                  id="option2"
+                  autocomplete="off"
+                  checked
+                />Not Depressed
               </label>
-            </div>            
+            </div>
           </div>
           <!-- Edit Disini Kata Katanya  -->
           <!-- Paragraf 1 -->
-          <p><span class="first-character sc">P</span>ada Barchart akan melihat perbandingan antara item data dan melihat tingkat frekuensi data pada tiap item data tersebut
-          yang bertujuan agar dapat dilakukan analisa tingkat kemungkinan pengaruh faktor terhadap terjadinya depresi. Barchart
-          atau diagram batang adalah jenis visualisasi data yang menggunakan batang vertikal atau horizontal untuk membandingkan
-          nilai-nilai atau kategori-kategori yang berbeda. Barchart sangat berguna dalam memperlihatkan perbandingan relatif
-          antara elemen-elemen data yang berbeda dan memberikan pemahaman yang cepat tentang distribusi atau perbedaan dalam
-          dataset. Barchart adalah alat yang kuat dalam membandingkan dan memvisualisasikan data dalam bentuk yang mudah dipahami.
-          Dengan menggunakan batang vertikal atau horizontal, barchart memungkinkan kita untuk melihat perbedaan, perbandingan,
-          dan pola dalam data secara visual. Membandingkan kategori: Barchart digunakan secara luas untuk membandingkan kategori
-          atau grup yang berbeda. Dengan menempatkan batang secara berdampingan, kita dapat melihat perbedaan ukuran, jumlah, atau
-          proporsi antara kategori-kategori tersebut. Hal ini memungkinkan kita untuk dengan mudah mengidentifikasi kategori
-          dengan nilai tertinggi atau terendah, serta melihat perbandingan relatif di antara mereka. Menyoroti tren atau perubahan
-          seiring waktu:</p>
+          <p>
+            <span class="first-character sc">P</span>ada Barchart akan melihat
+            perbandingan antara item data dan melihat tingkat frekuensi data
+            pada tiap item data tersebut yang bertujuan agar dapat dilakukan
+            analisa tingkat kemungkinan pengaruh faktor terhadap terjadinya
+            depresi. Barchart atau diagram batang adalah jenis visualisasi data
+            yang menggunakan batang vertikal atau horizontal untuk membandingkan
+            nilai-nilai atau kategori-kategori yang berbeda. Barchart sangat
+            berguna dalam memperlihatkan perbandingan relatif antara
+            elemen-elemen data yang berbeda dan memberikan pemahaman yang cepat
+            tentang distribusi atau perbedaan dalam dataset. Barchart adalah
+            alat yang kuat dalam membandingkan dan memvisualisasikan data dalam
+            bentuk yang mudah dipahami. Dengan menggunakan batang vertikal atau
+            horizontal, barchart memungkinkan kita untuk melihat perbedaan,
+            perbandingan, dan pola dalam data secara visual. Membandingkan
+            kategori: Barchart digunakan secara luas untuk membandingkan
+            kategori atau grup yang berbeda. Dengan menempatkan batang secara
+            berdampingan, kita dapat melihat perbedaan ukuran, jumlah, atau
+            proporsi antara kategori-kategori tersebut. Hal ini memungkinkan
+            kita untuk dengan mudah mengidentifikasi kategori dengan nilai
+            tertinggi atau terendah, serta melihat perbandingan relatif di
+            antara mereka. Menyoroti tren atau perubahan seiring waktu:
+          </p>
           <p class="line-break margin-top-10"></p>
           <!-- Paragraf 2 -->
-          <p class="margin-top-10">Dalam barchart, batang dapat diatur secara horizontal untuk memvisualisasikan tren atau perubahan seiring waktu. Dengan
-          menggunakan sumbu waktu pada sumbu vertikal dan nilai pada sumbu horizontal, kita dapat melihat bagaimana nilai atau
-          proporsi kategori berubah dari satu periode ke periode berikutnya. Hal ini membantu dalam melacak perubahan dan pola
-          dalam data dari waktu ke waktu. Membuat perbandingan kategori dengan subkategori: Barchart juga dapat digunakan untuk
-          membuat perbandingan antara kategori utama dan subkategori yang berkaitan. Dalam barchart ini, batang utama mewakili
-          kategori utama, sementara batang yang lebih kecil atau bagian dari batang utama mewakili subkategori. Ini membantu dalam
-          melihat kontribusi relatif dari setiap subkategori terhadap kategori utama dan membandingkan proporsi mereka.
-          Menggambarkan distribusi frekuensi: Dalam statistik, barchart dapat digunakan untuk menggambarkan distribusi frekuensi
-          dari data diskrit. Setiap batang mewakili interval atau kategori data, dan tinggi batang mewakili frekuensi atau jumlah
-          kejadian dalam interval tersebut. Dengan barchart, kita dapat melihat dengan jelas pola distribusi dan kecenderungan
-          dalam data. Menyampaikan informasi secara visual: Barchart memberikan cara yang mudah dan efektif untuk menyampaikan
-          informasi secara visual kepada audiens. Perbandingan relatif antara kategori-kategori dapat dengan jelas dan cepat
-          dipahami, membuatnya menjadi alat yang berguna dalam menyajikan data dalam laporan, presentasi, atau publikasi.</p>
+          <p class="margin-top-10">
+            Dalam barchart, batang dapat diatur secara horizontal untuk
+            memvisualisasikan tren atau perubahan seiring waktu. Dengan
+            menggunakan sumbu waktu pada sumbu vertikal dan nilai pada sumbu
+            horizontal, kita dapat melihat bagaimana nilai atau proporsi
+            kategori berubah dari satu periode ke periode berikutnya. Hal ini
+            membantu dalam melacak perubahan dan pola dalam data dari waktu ke
+            waktu. Membuat perbandingan kategori dengan subkategori: Barchart
+            juga dapat digunakan untuk membuat perbandingan antara kategori
+            utama dan subkategori yang berkaitan. Dalam barchart ini, batang
+            utama mewakili kategori utama, sementara batang yang lebih kecil
+            atau bagian dari batang utama mewakili subkategori. Ini membantu
+            dalam melihat kontribusi relatif dari setiap subkategori terhadap
+            kategori utama dan membandingkan proporsi mereka. Menggambarkan
+            distribusi frekuensi: Dalam statistik, barchart dapat digunakan
+            untuk menggambarkan distribusi frekuensi dari data diskrit. Setiap
+            batang mewakili interval atau kategori data, dan tinggi batang
+            mewakili frekuensi atau jumlah kejadian dalam interval tersebut.
+            Dengan barchart, kita dapat melihat dengan jelas pola distribusi dan
+            kecenderungan dalam data. Menyampaikan informasi secara visual:
+            Barchart memberikan cara yang mudah dan efektif untuk menyampaikan
+            informasi secara visual kepada audiens. Perbandingan relatif antara
+            kategori-kategori dapat dengan jelas dan cepat dipahami, membuatnya
+            menjadi alat yang berguna dalam menyajikan data dalam laporan,
+            presentasi, atau publikasi.
+          </p>
         </div>
       </section>
-    
+
       <section>
         <div class="parallax-two">
           <h2>SCATTER PLOT</h2>
         </div>
       </section>
-    
+
       <section>
         <div class="block">
           <div class="grafikchart">
+            <!-- <div id="my_dataviz2"></div> -->
             <div id="vis2"></div>
             <div class="btn-group-scatter" data-toggle="buttons">
               <label class="btn btn-primary">
-                <input value=0 class="sex2" type="radio" name="options" id="option1" autocomplete="off" />Male
+                <input
+                  value="0"
+                  class="sex2"
+                  type="radio"
+                  name="options"
+                  id="option1"
+                  autocomplete="off"
+                />Male
               </label>
               <label class="btn btn-primary active">
-                <input value=1 type="radio" class="sex2" name="options" id="option2" autocomplete="off" checked />Female
+                <input
+                  value="1"
+                  type="radio"
+                  class="sex2"
+                  name="options"
+                  id="option2"
+                  autocomplete="off"
+                  checked
+                />Female
               </label>
             </div>
-            
+
             <div class="btn-group-scatter" data-toggle="buttons">
               <label class="btn btn-primary">
-                <input value=1 type="radio" name="options" id="option1" autocomplete="off" />Depressed
+                <input
+                  value="1"
+                  type="radio"
+                  name="options"
+                  id="option1"
+                  autocomplete="off"
+                />Depressed
               </label>
               <label class="btn btn-primary active">
-                <input value=0 type="radio" name="options" id="option2" autocomplete="off" checked />Not Depressed
+                <input
+                  value="0"
+                  type="radio"
+                  name="options"
+                  id="option2"
+                  autocomplete="off"
+                  checked
+                />Not Depressed
               </label>
             </div>
           </div>
           <!-- Edit Disini Kata Katanya  -->
           <!-- Paragraf 1 -->
-          <p><span class="first-character ny">P</span>ada Scatter Plot merupakan jenis grafik yang digunakan untuk memvisualisasikan hubungan antara dua variabel numerik.
-          Scatter plot terdiri dari serangkaian titik yang mewakili nilai-nilai dari dua variabel yang berbeda, di mana sumbu
-          horizontal mewakili satu variabel dan sumbu vertikal mewakili variabel lainnya. Scatter plot merupakan alat yang berguna
-          dalam menganalisis data dan mengidentifikasi hubungan antara dua variabel. Dengan memvisualisasikan titik-titik data
-          dalam diagram, scatter plot membantu kita dalam menggambarkan pola, mengidentifikasi outlier, dan mengeksplorasi
-          korelasi antara variabel-variabel yang diamati. Menunjukkan hubungan korelasi: Scatter plot sangat berguna untuk
-          menentukan apakah ada hubungan korelasi antara dua variabel. Jika titik-titik cenderung membentuk pola yang teratur atau
-          bergerak dalam arah tertentu, maka itu menunjukkan adanya korelasi antara variabel-variabel tersebut. Misalnya, jika ada
-          peningkatan yang jelas dalam satu variabel ketika variabel lainnya juga meningkat, itu menunjukkan hubungan positif
-          antara kedua variabel tersebut. Identifikasi outlier.</p>
+          <p>
+            <span class="first-character ny">P</span>ada Scatter Plot merupakan
+            jenis grafik yang digunakan untuk memvisualisasikan hubungan antara
+            dua variabel numerik. Scatter plot terdiri dari serangkaian titik
+            yang mewakili nilai-nilai dari dua variabel yang berbeda, di mana
+            sumbu horizontal mewakili satu variabel dan sumbu vertikal mewakili
+            variabel lainnya. Scatter plot merupakan alat yang berguna dalam
+            menganalisis data dan mengidentifikasi hubungan antara dua variabel.
+            Dengan memvisualisasikan titik-titik data dalam diagram, scatter
+            plot membantu kita dalam menggambarkan pola, mengidentifikasi
+            outlier, dan mengeksplorasi korelasi antara variabel-variabel yang
+            diamati. Menunjukkan hubungan korelasi: Scatter plot sangat berguna
+            untuk menentukan apakah ada hubungan korelasi antara dua variabel.
+            Jika titik-titik cenderung membentuk pola yang teratur atau bergerak
+            dalam arah tertentu, maka itu menunjukkan adanya korelasi antara
+            variabel-variabel tersebut. Misalnya, jika ada peningkatan yang
+            jelas dalam satu variabel ketika variabel lainnya juga meningkat,
+            itu menunjukkan hubungan positif antara kedua variabel tersebut.
+            Identifikasi outlier.
+          </p>
           <p class="line-break margin-top-10"></p>
           <!-- Paragraf 2 -->
-          <p class="margin-top-10">Scatter plot membantu dalam identifikasi outlier atau nilai-nilai ekstrem yang berbeda dari pola umum. Outlier dapat
-          menjadi poin penting dalam analisis data, dan scatter plot membantu dalam mengidentifikasinya dengan melihat titik-titik
-          yang berada jauh dari pola umum. Clustering dan klasifikasi: Dalam analisis data dan pembelajaran mesin, scatter plot
-          dapat membantu dalam mengidentifikasi pola-pola cluster atau kelompok yang berbeda. Dengan melihat bagaimana titik-titik
-          tersebar, kita dapat melihat apakah ada kelompok-kelompok yang jelas atau apakah titik-titik tersebar secara acak.
-          Pemantauan tren: Scatter plot juga digunakan untuk melihat tren atau perubahan dalam data seiring waktu. Dengan
-          menempatkan titik-titik dalam urutan kronologis pada sumbu horizontal, kita dapat melihat apakah ada tren peningkatan
-          atau penurunan dalam variabel-variabel tersebut. Pembandingan variabel: Scatter plot memungkinkan perbandingan visual
-          antara dua variabel yang berbeda. Dengan melihat pola persebaran titik-titik, kita dapat membandingkan variabilitas atau
-          hubungan antara dua variabel dengan cepat dan mudah.</p>
+          <p class="margin-top-10">
+            Scatter plot membantu dalam identifikasi outlier atau nilai-nilai
+            ekstrem yang berbeda dari pola umum. Outlier dapat menjadi poin
+            penting dalam analisis data, dan scatter plot membantu dalam
+            mengidentifikasinya dengan melihat titik-titik yang berada jauh dari
+            pola umum. Clustering dan klasifikasi: Dalam analisis data dan
+            pembelajaran mesin, scatter plot dapat membantu dalam
+            mengidentifikasi pola-pola cluster atau kelompok yang berbeda.
+            Dengan melihat bagaimana titik-titik tersebar, kita dapat melihat
+            apakah ada kelompok-kelompok yang jelas atau apakah titik-titik
+            tersebar secara acak. Pemantauan tren: Scatter plot juga digunakan
+            untuk melihat tren atau perubahan dalam data seiring waktu. Dengan
+            menempatkan titik-titik dalam urutan kronologis pada sumbu
+            horizontal, kita dapat melihat apakah ada tren peningkatan atau
+            penurunan dalam variabel-variabel tersebut. Pembandingan variabel:
+            Scatter plot memungkinkan perbandingan visual antara dua variabel
+            yang berbeda. Dengan melihat pola persebaran titik-titik, kita dapat
+            membandingkan variabilitas atau hubungan antara dua variabel dengan
+            cepat dan mudah.
+          </p>
         </div>
       </section>
-    
+
       <section>
         <div class="parallax-three">
           <h2>HEAT MAP</h2>
         </div>
       </section>
-      
+
       <section>
         <div class="block">
           <div class="grafikchart">
-            <div id="visHeatmap"></div>
-            <div class="btn-group-heatmap" data-toggle="buttons">
-              <label class="btn btn-primary">
-                <input value=0 class="sex3" type="radio" name="options" id="option1" autocomplete="off" />Male
-              </label>
-              <label class="btn btn-primary active">
-                <input value=1 type="radio" class="sex" name="options" id="option2" autocomplete="off" checked />Female
-              </label>
-            </div>
-            
-            <div class="btn-group-heatmap" data-toggle="buttons">
-              <label class="btn btn-primary">
-                <input value=1 type="radio" name="options" id="option1" autocomplete="off" />Depressed
-              </label>
-              <label class="btn btn-primary active">
-                <input value=0 type="radio" name="options" id="option2" autocomplete="off" checked />Not Depressed
-              </label>
-            </div>
-
+            <div id="my_dataviz"></div>
           </div>
 
           <!-- Edit Disini Kata Katanya  -->
           <!-- Paragraf 1 -->
-          <p><span class="first-character atw">P</span>ada Heatmap akan melihat tingkat keterkaitan antara dua atribut dengan heatmap untuk mengetahui keberpengaruhan suatu
-          atribut terhadap atribut lainnya. Heatmap adalah jenis visualisasi data yang menggunakan skala warna untuk
-          memvisualisasikan intensitas atau nilai dari suatu variabel dalam suatu matriks atau tabel. Heatmap umumnya digunakan
-          untuk memperlihatkan pola dan perbandingan dalam data yang kompleks dan berstruktur. Heatmap adalah alat yang efektif
-          untuk menganalisis, memvisualisasikan, dan memahami pola dalam data. Dengan menggunakan skala warna untuk menyoroti
-          intensitas atau nilai, heatmap membantu kita dalam melihat perbedaan dan hubungan antara variabel-variabel dalam matriks
-          secara intuitif dan efisien. Representasi visual intensitas: Heatmap memungkinkan kita untuk melihat distribusi
-          intensitas atau nilai dalam matriks dengan cara yang intuitif dan efektif. Dalam heatmap, skala warna digunakan untuk
-          mewakili berbagai nilai, di mana warna yang lebih terang menunjukkan nilai yang lebih tinggi dan warna yang lebih gelap
-          menunjukkan nilai yang lebih rendah. Dengan menggunakan skala warna yang jelas, heatmap membantu dalam menyoroti
-          perbedaan dan pola dalam data. Identifikasi pola dan korelasi: Heatmap memungkinkan kita untuk mengidentifikasi pola dan
-          korelasi dalam data. Dengan menerapkan heatmap pada data numerik, kita dapat melihat hubungan antara variabel-variabel
-          secara visual. Heatmap memperlihatkan kecenderungan dan pola dalam korelasi antara variabel-variabel, di mana area
-          dengan warna yang serupa menunjukkan hubungan yang erat.</p>
+          <p>
+            <span class="first-character atw">P</span>ada Heatmap akan melihat
+            tingkat keterkaitan antara dua atribut dengan heatmap untuk
+            mengetahui keberpengaruhan suatu atribut terhadap atribut lainnya.
+            Heatmap adalah jenis visualisasi data yang menggunakan skala warna
+            untuk memvisualisasikan intensitas atau nilai dari suatu variabel
+            dalam suatu matriks atau tabel. Heatmap umumnya digunakan untuk
+            memperlihatkan pola dan perbandingan dalam data yang kompleks dan
+            berstruktur. Heatmap adalah alat yang efektif untuk menganalisis,
+            memvisualisasikan, dan memahami pola dalam data. Dengan menggunakan
+            skala warna untuk menyoroti intensitas atau nilai, heatmap membantu
+            kita dalam melihat perbedaan dan hubungan antara variabel-variabel
+            dalam matriks secara intuitif dan efisien. Representasi visual
+            intensitas: Heatmap memungkinkan kita untuk melihat distribusi
+            intensitas atau nilai dalam matriks dengan cara yang intuitif dan
+            efektif. Dalam heatmap, skala warna digunakan untuk mewakili
+            berbagai nilai, di mana warna yang lebih terang menunjukkan nilai
+            yang lebih tinggi dan warna yang lebih gelap menunjukkan nilai yang
+            lebih rendah. Dengan menggunakan skala warna yang jelas, heatmap
+            membantu dalam menyoroti perbedaan dan pola dalam data. Identifikasi
+            pola dan korelasi: Heatmap memungkinkan kita untuk mengidentifikasi
+            pola dan korelasi dalam data. Dengan menerapkan heatmap pada data
+            numerik, kita dapat melihat hubungan antara variabel-variabel secara
+            visual. Heatmap memperlihatkan kecenderungan dan pola dalam korelasi
+            antara variabel-variabel, di mana area dengan warna yang serupa
+            menunjukkan hubungan yang erat.
+          </p>
           <p class="line-break margin-top-10"></p>
           <!-- Paragraf 2 -->
-          <p class="margin-top-10">Analisis spasial: Heatmap dapat digunakan dalam analisis spasial untuk memvisualisasikan distribusi geografis atau
-          spasial dari suatu fenomena. Dalam konteks ini, heatmap dapat digunakan untuk menunjukkan pola konsentrasi atau
-          intensitas geografis dari suatu kejadian atau variabel dalam wilayah tertentu. Misalnya, dalam analisis epidemiologi,
-          heatmap dapat digunakan untuk memperlihatkan wilayah dengan tingkat kejadian penyakit yang tinggi atau rendah.
-          Visualisasi data besar: Heatmap sangat berguna dalam memvisualisasikan data besar dengan matriks yang kompleks. Dalam
-          heatmap, data yang berukuran besar dapat diurutkan dan diorganisir secara terstruktur, sehingga memudahkan untuk melihat
-          perbedaan dalam intensitas atau nilai antara baris dan kolom. Pengawasan dan analisis data real-time: Heatmap juga bisa
-          digunakan untuk memantau dan menganalisis data secara real-time. Dalam konteks bisnis atau penggunaan lainnya, heatmap
-          dapat digunakan untuk melacak dan memvisualisasikan perubahan nilai atau intensitas dalam waktu nyata, yang dapat
-          membantu dalam pengambilan keputusan yang cepat dan informasi yang akurat.
+          <p class="margin-top-10">
+            Analisis spasial: Heatmap dapat digunakan dalam analisis spasial
+            untuk memvisualisasikan distribusi geografis atau spasial dari suatu
+            fenomena. Dalam konteks ini, heatmap dapat digunakan untuk
+            menunjukkan pola konsentrasi atau intensitas geografis dari suatu
+            kejadian atau variabel dalam wilayah tertentu. Misalnya, dalam
+            analisis epidemiologi, heatmap dapat digunakan untuk memperlihatkan
+            wilayah dengan tingkat kejadian penyakit yang tinggi atau rendah.
+            Visualisasi data besar: Heatmap sangat berguna dalam
+            memvisualisasikan data besar dengan matriks yang kompleks. Dalam
+            heatmap, data yang berukuran besar dapat diurutkan dan diorganisir
+            secara terstruktur, sehingga memudahkan untuk melihat perbedaan
+            dalam intensitas atau nilai antara baris dan kolom. Pengawasan dan
+            analisis data real-time: Heatmap juga bisa digunakan untuk memantau
+            dan menganalisis data secara real-time. Dalam konteks bisnis atau
+            penggunaan lainnya, heatmap dapat digunakan untuk melacak dan
+            memvisualisasikan perubahan nilai atau intensitas dalam waktu nyata,
+            yang dapat membantu dalam pengambilan keputusan yang cepat dan
+            informasi yang akurat.
           </p>
         </div>
       </section>
-    
     </div>
-
 
     <!-- Libraries -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -213,14 +315,10 @@
 
     <!-- your script file -->
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-
-    <!-- <script src="/src/js/map.js"></script> -->
-    <script src="/src/js/Heatmap.js"></script>
-    <script src="/src/js/FilterHeatmap.js"></script>
+    <script src="/src/js/heatmap2.js"></script>
     <script src="/src/js/barchart.js"></script>
     <script src="/src/js/Scatterplot.js"></script>
     <script src="/src/js/FilterScatterplot.js"></script>
     <script src="/src/js/main.js"></script>
-
   </body>
 </html>
